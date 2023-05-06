@@ -1,0 +1,50 @@
+<h2>Check Out</h2>
+<body>
+<div class="container">
+  <form class="form" [formGroup]="formPagos" (ngSubmit)="abrirCheckOut()">
+    <div>
+      <label for="nombreUsuario" class="label">Nombre</label>
+      <input
+        type="text"
+        id="nombreUsuario"
+        formControlName="nombreUsuario"
+        readonly
+      />
+    </div>
+    <div>
+      <label for="apellidoUsuario" class="label">Apellidos</label>
+      <input
+        type="text"
+        id="apellidoUsuario"
+        formControlName="apellidoUsuario"
+        readonly
+      />
+    </div>
+    <div>
+      <label for="correoUsuario" class="label">Correo</label>
+      <input
+        type="text"
+        id="correoUsuario"
+        formControlName="correoUsuario"
+        readonly
+      />
+    </div>
+    <div>
+      <label for="nombreCurso" class="label">Descripción del Pedido</label>
+      <input type="text" id="nombreCurso" formControlName="nombreCurso"readonly />
+    </div>
+    <div>
+      <label for="precioCurso" class="label">Total a Pagar</label>
+      <input
+        type="text"
+        id="precioCurso"
+        formControlName="precioCurso"
+        readonly
+      />
+    </div>
+    <button class="bottom" [disabled]="!formPagos.valid">Pagar</button>
+  </form>
+</div>
+</body>
+
+

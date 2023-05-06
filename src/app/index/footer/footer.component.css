@@ -1,0 +1,22 @@
+
+footer {
+    background-image: url('src/assets/images/fondos/04.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .form-group {
+    margin-bottom: 5px;
+  }
+  .button-price {
+    border: none;
+    width: 160px;
+    height: 35px;
+    background-color: white;
+    border-radius: 12px;
+    margin-top: 5px;
+    font-weight: bold;
+  }
+  .price-anchor {
+    color: black;
+    text-decoration: none;
+  }

@@ -1,0 +1,18 @@
+<nav class="header-nav" *ngIf="showHeader">
+    <div class="nav-items">
+      <img src="/assets/logos/vitalflowlogo.png" alt="logo-vital-flow" class="nav-logo">         
+      <button class="header-nav--anchor" ><a class="text-decoration-none log-out" href="#encabezado1">Encabezado</a></button>
+      <button class="header-nav--anchor"><a class="text-decoration-none log-out" href="#quienes_somos">¿Quienes somos?</a></button>
+      <button class="header-nav--anchor"><a class="text-decoration-none log-out" href="#promociones">Promociones</a></button>
+      <button class="header-nav--anchor"><a class="text-decoration-none log-out" href="#resenas">Reseñas</a></button>
+      <button class="header-nav--anchor"><a class="text-decoration-none log-out" href="#footer">Footer</a></button>
+    </div>
+    
+
+
+    <button (click)="onLoginClick()" class="button-login" routerLink="/login">
+      <a class="button-login--anchor" routerLink="/login"> Inicio de sesión</a>
+    </button>
+</nav>
+<app-landing-page *ngIf="showIndex"/>
+<app-login *ngIf="showLogin"></app-login>
