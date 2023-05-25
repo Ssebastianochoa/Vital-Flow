@@ -1,4 +1,5 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { ConstantPool } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -24,7 +25,7 @@ export class LoginComponent {
   password: string = '';
   loginError: boolean = false;
 
-  constructor(private router: Router) {}
+  constructor(private http : HttpClient, private router : Router) {}
 
   showLoginn: boolean = true; 
   showForm: boolean = false;
@@ -58,14 +59,21 @@ export class LoginComponent {
   }
 
   login() {
-    if(this.email === EMAIL && this.password === PASSWORD ) {
-      localStorage.setItem('user', JSON.stringify(this.userInfo) );
-      this.router.navigate(['/home'])
-    }else {
-      this.loginError = true;
-    }
+    const httpOptions = {headers: new HttpHeaders({'Content-Type': 'application/json',})}
+    const data = this.formLogin.value;
+    console.log(data);
+    this.http.post<any>('http://localhost:8080/authorizations/login', data, httpOptions).subscribe(res=> {
+      console.log(res);
+      this.formLogin.reset();
+      this.router.navigate(['/home']);
+    });
   }
 }
 
-
+//if(this.email === EMAIL && this.password === PASSWORD ) {
+     // localStorage.setItem('user', JSON.stringify(this.userInfo) );
+     // this.router.navigate(['/home'])
+    //}else {
+     // this.loginError = true;
+    //}
 
