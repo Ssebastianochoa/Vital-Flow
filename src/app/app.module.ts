@@ -25,6 +25,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CookieService } from 'ngx-cookie-service';
 import { TestComponent } from './test/test.component';
+import { MultimediaComponent } from './multimedia/multimedia.component';
+import { MultimediaModule } from './multimedia/multimedia.module';
 
 
 
@@ -49,7 +51,8 @@ import { TestComponent } from './test/test.component';
     FormularioComponent,
     ContrasenaComponent,
     PageNotFoundComponent,
-    TestComponent
+    TestComponent,
+    MultimediaComponent
   ],
   imports: [
     BrowserModule,
@@ -58,6 +61,7 @@ import { TestComponent } from './test/test.component';
     ReactiveFormsModule,
     FontAwesomeModule,
     CommonModule,
+    MultimediaModule,
   ],
   providers: [CookieService],
   bootstrap: [AppComponent]

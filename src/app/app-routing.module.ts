@@ -18,7 +18,7 @@ import { RegistroComponent } from './registro/registro.component';
 import { CursoComponent } from './curso/curso.component';
 import { PagosComponent } from './pagos/pagos.component';
 import { TestComponent } from './test/test.component';
-
+import { MultimediaComponent } from './multimedia/multimedia.component';
 
 const routes: Routes = [
   {
@@ -63,6 +63,10 @@ const routes: Routes = [
     path: 'pagos',
     component: PagosComponent,
   },
+    {
+      path: 'multimedia',
+      component: MultimediaComponent,
+    },
   {
     path: '',
     redirectTo: '/index',
@@ -72,17 +76,17 @@ const routes: Routes = [
     path: '**',
     component: PageNotFoundComponent
   },
- 
+
   // {
   //   path: '',
   //   redirectTo: '/registro',
   //   pathMatch: 'full',
-    
+
 
   // }
   // },
 
-    
+
 
 ]
 @NgModule({
