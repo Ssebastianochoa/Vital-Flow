@@ -28,9 +28,16 @@ export class FormularioComponent {
 
     const data = this.formUsers.value;
     console.log(data);
-    this.http.post<any>(`${environment.apiUrl}/users`, data).subscribe(res=> {
+    this.http.post<any>(`http://localhost:8080/users`, data).subscribe(res=> {
       this.formUsers.reset();
-      this.router.navigate(['/login']);
+      this.router.navigate(['/index']);
     });
+  //   const data = this.formUsers.value;
+  //   console.log(data);
+  //   this.http.post<any>(`http://localhost:8080/users/created`, data).subscribe(res=> {
+  //     this.formUsers.reset();
+  //     this.router.navigate(['/login']);
+  //   });
+  // }
   }
 }

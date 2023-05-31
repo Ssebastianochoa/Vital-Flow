@@ -27,8 +27,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { TestComponent } from './test/test.component';
 import { MultimediaComponent } from './multimedia/multimedia.component';
 import { MultimediaModule } from './multimedia/multimedia.module';
-
-
+import { HttpClient } from '@angular/common/http';
 
 
 @NgModule({
